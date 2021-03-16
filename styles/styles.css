@@ -146,9 +146,16 @@ body {
 .footer {
     background-color: var(--footer-color);
     display: flex;
-    justify-content: center;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-container {
+    display: flex;
+}
+.footer-social {
+    display: flex;
+    align-items: stretch;
 }
 .footer-address {
     line-height: 1.71;
@@ -304,6 +311,7 @@ header{
 }
 .what-we-do {
     padding-bottom: 94px;
+    margin-top: 94px;
 }
 .what-we-do-img {
     margin-top: 50px;  
@@ -375,22 +383,85 @@ header{
 .our-projets img {
     max-width: 100%;
 }
-.footer-social-list {
-    display: inline-flex;
-}
 .footer-social-list .social-list-item:not(:last-child){
     margin-right: 10px;
 }
+.footer-social-list .social-list-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+.footer-social-list .social-list-icon {
+    fill: var(--background-color);
+}
+.footer-social-list {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
 .join {
     margin-bottom: 20px;
-
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--background-color);
+    margin-top: 9px;
 }
 .footer-social {
-    margin-top: 72px;
-    margin-left: 516px;
+    display: block;
+    margin-top: 21px;
+    width: 206px;
+    margin-left: 40px;
+}
+.permanent-clients-item {
+    width: 170px;
+    height: 90px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.permanent-clients {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.section-clients h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.permanent-clients-item:hover {
+    border-color:var(--accent-color);
+}
+.permanent-clients-icon {
+    fill: #AFB1B8;
+}
+.permanent-clients-item:hover .permanent-clients-icon {
+    fill: var(--accent-color);
+}
+.about-us-box-icon {
+    width: 70px;
+    height: 70px;
+}
+.about-us-boxlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
 }
