@@ -7,6 +7,7 @@
     --logo-color: #000000;
     --footer-color: #2F303A;
     --footer-address-color: rgba(255, 255, 255, 0.6);
+    --box-shadow: rgba(0, 0, 0, .12)
 }
 h1,
 h2,
@@ -96,7 +97,6 @@ body {
     min-width: 200px;
     height: 50px;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     display: flex;
     margin: auto;
     padding-top: 10px;
@@ -166,9 +166,12 @@ body {
     line-height: 1.71;
     color: var(--footer-address-color);
 }
+.footer-address:hover,
+.footer-address:focus {
+    color: var(--accent-color);
+}
 .footer-address {
     display: block;
-    margin-top: 9px;
 }
 .address {
     line-height: 1.71;
@@ -209,6 +212,11 @@ body {
 .button-list-item:focus {
     background-color: var(--accent-color);
     color: var(--background-color);
+    box-shadow: 0px 2px 2px 0px var(--box-shadow);
+}
+.our-projets .projects-list:hover,
+.our-projets .projects-list:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); 
 }
 .container {
     width: 1200px;
@@ -388,22 +396,20 @@ header{
 .our-projets img {
     max-width: 100%;
 }
-.footer-social-list .social-list-item:not(:last-child){
-    margin-right: 10px;
-}
 .footer-social-list .social-list-item {
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);;
 }
-.footer-social-list .social-list-icon {
-    fill: var(--background-color);
-}
 .footer-social-list {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
+}
+.footer-container {
+    display: flex;
+    align-items: baseline;
 }
 .join {
     margin-bottom: 20px;
@@ -416,9 +422,10 @@ header{
 }
 .footer-social {
     display: block;
-    margin-top: 21px;
     width: 206px;
-    margin-left: 40px;
+}
+.social-list-link .white {
+    fill: var(--background-color);
 }
 .permanent-clients-item {
     width: 170px;
@@ -479,4 +486,12 @@ header{
     width: 10px;
     height: 16px;
     margin-right: 10px;
+}
+.contacts-list .email-link:hover,
+.contacts-list .email-link:focus {
+    fill: var(--accent-color);
+}
+.contacts-list .tel-link:hover,
+.contacts-list .tel-link:focus {
+    fill: var(--accent-color);
 }
