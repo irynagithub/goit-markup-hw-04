@@ -392,14 +392,80 @@
         </div>
       </div>
     </footer>
+    <!-- /* ======== Модальное окно ======== */ -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-          <button class="modal-button" type="button" data-modal-close>
-              <svg class="button-svg" width="11" height="11">
-                  <use href="./images/icons.svg#close-btn"></use>
+        <button class="btn-close" type="button" data-modal-close>
+          <svg width="18" height="18" class="close">
+            <use href="./images/symbol-defs.svg#close"></use>
+          </svg>
+        </button>
+        <form class="modal-menu">
+          <div class="contact-model">
+            <p class="title-form">Оставьте свои данные, мы вам перезвоним</p>
+            <label class="form-filed" for="user-name">Имя</label>
+            <div class="form-rel">
+              <input
+                class="form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="icon-label" width="18" height="18">
+                <use href="./images/symbol-defs.svg#person-black"></use>
               </svg>
-          </button>
-      </div>
-  </div>
+            </div>
+
+            <label class="form-filed" for="user-te">Телефон</label>
+            <div class="form-rel">
+              <input
+                class="form-input"
+                type="tel"
+                name="user-tel"
+                id="user-te"
+              />
+              <svg class="icon-label" width="18" height="18">
+                <use href="./images/symbol-defs.svg#phone-black"></use>
+              </svg>
+            </div>
+
+            <label class="form-filed" for="user-email">Почта</label>
+            <div class="form-rel">
+              <input
+                class="form-input"
+                type="email"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="icon-label" width="18" height="18">
+                <use href="./images/symbol-defs.svg#email-black"></use>
+              </svg>
+            </div>
+
+            <label class="form-filed" for="message">Комментарий</label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="message"
+              placeholder="Введите текст">
+            </textarea>
+          </div>
+
+          <label class="agreement-filed">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="contract"
+              value="conditions"
+            />
+            <span class="check-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <span class="contract">
+              <a href="" class="contract-link">Условия договора</a></span
+            >
+          </label>
+
+          <button class="button primary" type="submit">Отправить</button>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
