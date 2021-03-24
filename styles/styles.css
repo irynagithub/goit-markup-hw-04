@@ -29,6 +29,7 @@ a {
 }
 .link {
     text-decoration: none;
+    color: inherit;
 }
 .list {
     list-style: none;
@@ -104,6 +105,7 @@ body {
     padding-right: 32px;
     padding-left: 32px;
     margin-top: 30px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .title {
     font-weight: 900;
@@ -171,6 +173,13 @@ body {
 }
 .footer-address {
     display: block;
+    margin-right: 70px;
+}
+/*.footer-list .footer-address:not(:last-child) {
+    margin-bottom: 9px;
+}*/
+.footer-list-item {
+    margin-top: 9px;
 }
 .address {
     line-height: 1.71;
@@ -243,19 +252,16 @@ header{
 }
 .navigation-list {
     display: flex;
-    align-items: center;
+    text-align: center;
+    margin-left: 93px;
 }
 .contacts-list {
     display: flex;
     text-align: center;
     margin-left: auto;
 }
-.email-link {
+.contacts-list .item:not(:last-child){
     margin-right: 50px;
-    min-width: 135px;
-}
-.tel-link {
-    min-width: 122px;
 }
 .navigation-list-item:not(:last-child) {
     margin-right: 50px;
@@ -286,7 +292,6 @@ header{
 .our-team {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
 }
 .team {
     padding-top: 94px;
@@ -298,14 +303,11 @@ header{
     border-radius: 0px 0px 4px 4px;
     background-color: var(--background-color);
 }
-.team-foto {
-    margin-bottom: 30px;
-}
 .team-name {
     margin-bottom: 10px;
 }
 .team-position {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .what-we-do-list {
     display: flex;
@@ -318,13 +320,11 @@ header{
 }
 .about-us-box {
     min-width: 270px;
-    height: 101px;
     justify-content: space-between;
     margin-right: 30px;
 }
 .what-we-do {
     padding-bottom: 94px;
-    margin-top: 94px;
 }
 .what-we-do-img {
     margin-top: 50px;  
@@ -339,12 +339,10 @@ header{
     flex-direction: row;
     justify-content: center;
     margin-bottom: 34px;
-    margin-top: 94px;
 }
 .our-projets {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 94px;
     margin-left: -30px;
     margin-top: -30px;
 }
@@ -374,10 +372,13 @@ header{
     height: 20px;
     fill: #8188a1;
 }
+.our-team-container .social-list-icon:focus,
+.our-team-container .social-list-icon:hover {
+    fill: #FFFFFF;
+}
 .social-list {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     justify-content: center;
 }
 .social-list-link {
@@ -454,13 +455,16 @@ header{
     text-align: center;
     margin-bottom: 50px;
 }
-.permanent-clients-item:hover {
+.permanent-clients-item:hover{
     border-color:var(--accent-color);
 }
 .permanent-clients-icon {
     fill: #AFB1B8;
 }
 .permanent-clients-item:hover .permanent-clients-icon {
+    fill: var(--accent-color);
+}
+.permanent-clients-item .permanent-clients-icon:focus {
     fill: var(--accent-color);
 }
 .about-us-box-icon {
@@ -494,4 +498,18 @@ header{
 .contacts-list .tel-link:hover,
 .contacts-list .tel-link:focus {
     fill: var(--accent-color);
+}
+.our-team-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.main-section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+.section-clients .permanent-clients-item-link:hover,
+.section-clients .permanent-clients-item-link:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
