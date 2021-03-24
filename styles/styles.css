@@ -361,6 +361,7 @@ header{
 }
 .project-item {
     margin-bottom: 8px;
+    color: var(--text-color);
 }
 .div-project-item {
     padding-top: 20px;
